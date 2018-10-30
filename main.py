@@ -44,4 +44,4 @@ class PySinger():
         
 
 ps = PySinger()
-ps.play("sw.txt")
+ps.play("")
