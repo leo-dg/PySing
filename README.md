@@ -4,7 +4,7 @@
 ## Description
 PySing allows Windows users to use Python to play music with a `.txt` of the notes used in the music. Accidentals and note duration can also specified, though these features are not yet robust. To do this, the `winsound` library has been used to play beeps.
 
-## Preqrequisites
+## Prerequisites
 To use PySing, you simply need a Windows machine and have Python 3 installed. To make PySing <em>sing</em>, a basic understanding of sheet music is also required.
 
 ## Usage
