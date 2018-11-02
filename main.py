@@ -3,7 +3,7 @@ import time
 from config import NOTES, DURATIONS
 
 class PySinger():    
-    A4 = 440
+    A4 = 440 # Set base frequency.
 
     def __init__(self):
         return
@@ -12,7 +12,6 @@ class PySinger():
         with open(file) as f:
             musicString = f.read()
         f.close()
-
         return musicString
 
     def getFrequency(self, halfSteps):
@@ -39,9 +38,3 @@ class PySinger():
                     d = DURATIONS[note[2:]]
                 
                 winsound.Beep(f,d)
-                winsound.SND_ASYNC
-
-        
-
-ps = PySinger()
-ps.play("")
