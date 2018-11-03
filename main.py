@@ -1,10 +1,9 @@
 import winsound
 import time
-from config import NOTES, DURATIONS
+from config import NOTES, DURATIONS, RESTS
 
 class PySinger():
     A4 = 440 # Set base frequency.
-    CROTCHET_REST = 1.25
 
     def __init__(self):
         return
@@ -29,7 +28,7 @@ class PySinger():
             note = music[i]
             
             if note == "_":
-                time.sleep(self.CROTCHET_REST)
+                time.sleep(RESTS["Cr"])
             else:
                 if len(note) > 3:
                     # accidental
@@ -40,4 +39,5 @@ class PySinger():
                     f = self.getFrequency(NOTES[note[:2]])
                     d = DURATIONS[note[2:]]
                 
-                winsound.Beep(f,d)
+                winsound.PlaySound(winsound.Beep(f,d), winsound.SND_ASYNC)
+                #winsound.Beep(f,d)

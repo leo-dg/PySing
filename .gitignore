@@ -1,7 +1,5 @@
-/cb.txt
-/sans.txt
-/sw.txt
-/helloworld.txt
 .vscode
+/music
 /env
 /__pycache__
+test.py
