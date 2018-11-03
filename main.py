@@ -2,8 +2,9 @@ import winsound
 import time
 from config import NOTES, DURATIONS
 
-class PySinger():    
+class PySinger():
     A4 = 440 # Set base frequency.
+    CROTCHET_REST = 1.25
 
     def __init__(self):
         return
@@ -13,20 +14,22 @@ class PySinger():
             musicString = f.read()
         f.close()
         return musicString
+    
+    def parseToArray(self, fileString):
+        return self.read(fileString).split(",")
 
     def getFrequency(self, halfSteps):
         freq = self.A4 * ((2**(1/12)) ** halfSteps)
         return round(freq)
 
     def play(self, file):
-        music = self.read(file).split(",")
+        music = self.parseToArray(file)
         
         for i in range(len(music)):
             note = music[i]
-            #print(note)
             
             if note == "_":
-                time.sleep(1.25)
+                time.sleep(self.CROTCHET_REST)
             else:
                 if len(note) > 3:
                     # accidental
