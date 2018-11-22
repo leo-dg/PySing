@@ -24,5 +24,5 @@ The `.txt` must follow the specified format:
     * `Q` - Quaver
     * `q` - Semiquaver
 
-Example: `C#4C` would play a middle C# crotchet.
+Example: `C#4C` would play a middle C# crotchet. Note that the order is <Note><Accidental (if applicable)><Octave><Duration>.
 Note: Currently, the values for all durations are hardcoded.
